@@ -1,42 +1,30 @@
-<section class="rsvp">
+<section class="rsvp-section" id="rsvp">
+    <div class="glass-panel text-center fade-in">
+        <h2>Подтвердите участие</h2>
+        <p class="mb-2">Խնդրում ենք հաստատել Ձեր ներկայությունը:/Пожалуйста, подтвердите ваше присутствие!</p>
 
-<h2>Подтвердите участие</h2>
+        <form (submit)="send($event)">
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="come" value="Կարող եմ գալ" [(ngModel)]="come">
+                    <span class="checkmark"></span>
+                    Կարող եմ գալ <br> (Могу прийти)
+                </label>
+                <label>
+                    <input type="radio" name="come" value="Չեմ կարող գալ" [(ngModel)]="come">
+                    <span class="checkmark"></span>
+                    Չեմ կարող գալ <br> (Не могу)
+                </label>
+            </div>
 
-<form (submit)="send($event)">
+            <input type="text" placeholder="Անուն / Имя" [(ngModel)]="name" name="name" required />
+            <input type="text" placeholder="Ազգանուն / Фамилия" [(ngModel)]="surname" name="surname" required />
+            <input type="number" placeholder="Հյուրերի քանակ / Количество гостей" [(ngModel)]="guests" name="guests"
+                min="1" max="10" />
 
-<label>
-<input type="radio" name="come" value="yes" [(ngModel)]="come">
-Կարող եմ գալ
-</label>
-
-<label>
-<input type="radio" name="come" value="no" [(ngModel)]="come">
-Չեմ կարող գալ
-</label>
-
-<input
-type="number"
-placeholder="Հյուրերի քանակ"
-[(ngModel)]="guests"
-name="guests"
-/>
-
-<input
-type="text"
-placeholder="Անուն"
-[(ngModel)]="name"
-name="name"
-/>
-
-<input
-type="text"
-placeholder="Ազգանուն"
-[(ngModel)]="surname"
-name="surname"
-/>
-
-<button>Ուղարկել</button>
-
-</form>
-
+            <button type="submit" class="mt-2" [disabled]="isSending">
+                {{ isSending ? 'Ուղարկվում է...' : 'Ուղարկել / Отправить' }}
+            </button>
+        </form>
+    </div>
 </section>

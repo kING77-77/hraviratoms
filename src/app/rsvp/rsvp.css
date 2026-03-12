@@ -1,0 +1,20 @@
+.rsvp-section {
+    position: relative;
+    background-color: var(--secondary-color);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(223, 205, 186, 0.2) 100%);
+}
+
+.radio-group label {
+    text-align: left;
+    line-height: 1.4;
+    font-size: 1rem;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.checkmark {
+    top: 30%;
+}
