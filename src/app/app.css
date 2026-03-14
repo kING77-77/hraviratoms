@@ -7,20 +7,21 @@
   
   a {
     display: inline-block;
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    background: #4a4a4a;
     color: white;
-    padding: 12px 24px;
+    padding: 12px 28px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 16px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
+    letter-spacing: 1px;
     
     &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 35px rgba(0,0,0,0.3);
-      background: linear-gradient(45deg, #ff8e8e, #6be5dd);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      background: #333333;
     }
   }
 }
