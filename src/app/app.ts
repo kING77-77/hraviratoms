@@ -5,11 +5,12 @@ import { Rsvp } from './rsvp/rsvp';
 import { Footer } from './footer/footer';
 import { Countdown } from './countdown/countdown';
 import { CouplePhoto } from './couple-photo/couple-photo';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Hero, Info, Countdown, CouplePhoto, Rsvp, Footer],
+  imports: [Hero, Info, Countdown, CouplePhoto, Rsvp, Footer, RouterModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
