@@ -15,7 +15,7 @@ export class Rsvp {
   name = '';
   surname = '';
   come = '';
-  guests = 1;
+  guests: number | null = null;
   isSending = false;
 
   constructor(private telegram: TelegramService) {}
@@ -28,7 +28,7 @@ export class Rsvp {
       return;
     }
 
-    this.isSending = true;
+    this.isSending = true; 
 
     // Simulate sending time briefly for UX, then actually trigger telegram service
     setTimeout(() => {
@@ -45,7 +45,7 @@ export class Rsvp {
         this.name = '';
         this.surname = '';
         this.come = '';
-        this.guests = 1;
+        this.guests = null;
       } catch (err) {
         alert('Произошла ошибка / Սխալ տեղի ունեցավ');
       } finally {

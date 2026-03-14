@@ -7,7 +7,18 @@
     min-height: 100vh;
     padding: 2rem;
 }
+h2.gs{
+    color: white;
+}
 
+button.mt-2{
+    background-color: #ffae58;
+    border: 1px solid #ffae58;
+    color: #f9f9f9;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}   
 .hero-bg {
     position: absolute;
     top: 0;
