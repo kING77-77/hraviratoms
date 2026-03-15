@@ -12,13 +12,38 @@ h2.gs{
 }
 
 button.mt-2{
-    background-color: #ffae58;
-    border: 1px solid #ffae58;
-    color: #f9f9f9;
-    padding: 10px 20px;
-    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     cursor: pointer;
-}   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto 0 auto;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+    backdrop-filter: blur(5px);
+}
+
+button.mt-2:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #fff;
+    transform: scale(1.1);
+}
+
+button.mt-2 i {
+    font-size: 1.2rem;
+    margin-left: 4px; /* Slight offset to visually center the play icon */
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
 .hero-bg {
     position: absolute;
     top: 0;

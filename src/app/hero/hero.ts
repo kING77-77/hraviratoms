@@ -7,9 +7,19 @@ import { Component } from '@angular/core';
   styleUrl: './hero.css',
 })
 export class Hero {
-scroll(){
-document.getElementById('info')?.scrollIntoView({
-behavior:'smooth'
-})
-}
+  private audio = new Audio('assets/music/aram.mp3');
+
+  constructor() {
+    this.audio.loop = true;
+  }
+
+  scroll() {
+    if (this.audio.paused) {
+      this.audio.play().catch(error => console.error("Audio playback failed:", error));
+    }
+    
+    document.getElementById('info')?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
 }
