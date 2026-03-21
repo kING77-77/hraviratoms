@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './countdown.css'
 })
 export class Countdown implements OnInit, OnDestroy {
- targetDate = new Date('2026-03-21T10:40:00+04:00').getTime();
+ targetDate = new Date('2026-03-28T10:40:00+04:00').getTime();
   days: number = 0;
   hours: number = 0;
   minutes: number = 0;
